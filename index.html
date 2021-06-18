@@ -1,1 +1,48 @@
-hello
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>画像の表示をラジオボタンで切り換える例</h2>
+		<div id="app">
+			<label><input type="radio" value="miku.png" v-model="fileName">
+				初音ミク</label><br>
+			<label><input type="radio" value="ruka.png" v-model="fileName">
+				巡音ルカ</label><br>
+			<label><input type="radio" value="ren.png" v-model="fileName">
+				鏡音レン</label><br>
+			<label><input type="radio" value="rin.png" v-model="fileName">
+				鏡音リン</label><br>
+			<label><input type="radio" value="meiko.png" v-model="fileName">
+				MEIKO</label><br>
+			<label><input type="radio" value="kaito.png" v-model="fileName">
+				KAITO</label><br>
+			<label><input type="radio" value="ichika.png" v-model="fileName">
+				星乃一歌</label><br>
+			<label><input type="radio" value="saki.png" v-model="fileName">
+				天馬咲希</label><br>
+			<label><input type="radio" value="shiho.png" v-model="fileName">
+				日野森志歩</label><br>
+			<label><input type="radio" value="honami.png" v-model="fileName">
+				望月穂波</label><br>
+			
+			<p>{{ fileName }} を選択<p>
+			<img v-bind:src="fileName"></img>
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					fileName: ''
+				}
+			})
+		</script>
+
+	</body>
+</html>
