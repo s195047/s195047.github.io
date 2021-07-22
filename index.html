@@ -8,74 +8,191 @@
 	</head>
 	
 	<body>
-		<h2>画像の表示をラジオボタンで切り換える例</h2>
+		<h2>プロジェクトセカイ　キャラクタープロフィール一覧</h2>
 		<div id="app">
-			<label><input type="radio" value="miku.png" v-model="fileName">
-				初音ミク</label><br>
-			<label><input type="radio" value="ruka.png" v-model="fileName">
-				巡音ルカ</label><br>
-			<label><input type="radio" value="ren.png" v-model="fileName">
-				鏡音レン</label><br>
-			<label><input type="radio" value="rin.png" v-model="fileName">
-				鏡音リン</label><br>
-			<label><input type="radio" value="meiko.png" v-model="fileName">
-				MEIKO</label><br>
-			<label><input type="radio" value="kaito.png" v-model="fileName">
+			VIRTUAL SINGER<br>
+			<label><input type="checkbox" value="miku.png" v-model="isOKv1">
+				初音ミク</label>
+				<transition>
+					<p v-if="isOKv1"><img src ="miku.png"><br>誕生日　8月31日<br>身長　158cm<br></p>
+				</transition>
+			<label><input type="checkbox" value="ruka.png" v-model="isOKv2">
+				巡音ルカ</label>
+				<transition>
+					<p v-if="isOKv2"><img src ="ruka.png"><br>誕生日　12月27日<br>身長　152cm<br></p>
+				</transition>
+			<label><input type="checkbox" value="ren.png" v-model="isOKv3">
+				鏡音レン</label>
+				<transition>
+					<p v-if="isOKv3"><img src ="ren.png"><br>誕生日　12月27日<br>身長　156cm<br></p>
+				</transition>
+			<label><input type="checkbox" value="rin.png" v-model="isOKv4">
+				鏡音リン</label>
+				<transition>
+					<p v-if="isOKv4"><img src ="rin.png"><br>誕生日　1月30日<br>身長　162cm<br></p>
+				</transition>
+			<label><input type="checkbox" value="meiko.png" v-model="isOKv5">
+				MEIKO</label>
+				<transition>
+					<p v-if="isOKv5"><img src ="meiko.png"><br>誕生日　11月5日<br>身長　167cm<br></p>
+				</transition>
+			<label><input type="checkbox" value="kaito.png" v-model="isOKv6">
 				KAITO</label><br>
-			<label><input type="radio" value="ichika.png" v-model="fileName">
-				星乃一歌</label><br>
-			<label><input type="radio" value="saki.png" v-model="fileName">
-				天馬咲希</label><br>
-			<label><input type="radio" value="shiho.png" v-model="fileName">
-				日野森志歩</label><br>
-			<label><input type="radio" value="honami.png" v-model="fileName">
+				<transition>
+					<p v-if="isOKv6"><img src ="kaito.png"><br>誕生日　2月17日<br>身長　175cm<br></p>
+				</transition>
+				Leo/need<br>
+			<label><input type="checkbox" value="ichika.png" v-model="isOKl1">
+				星乃一歌</label>
+				<transition>
+					<p v-if="isOKl1"><img src ="ichika.png"><br>学校　宮益坂女子学園<br>学年　1-C<br>趣味　ミクの歌を聴くこと、育てているサボテンを眺める<br>特技　りんごの皮むき<br>好きな食べ物　焼きそばパン<br>嫌いな食べ物　グリーンピース<br>苦手　絶叫アトラクション<br>誕生日　8月11日<br>身長　161cm</p>
+				</transition>
+			<label><input type="checkbox" value="saki.png" v-model="isOKl2">
+				天馬咲希</label>
+				<transition>
+					<p v-if="isOKl2"><img src ="saki.png"><br>学校　宮益坂女子学園<br>学年　1-C<br>趣味　ファッション・メイク動画視聴、ビーズアクセサリー作り<br>特技　ヘアアレンジ、お手玉<br>好きな食べ物　スナック菓子<br>嫌いな食べ物　おかゆ<br>苦手　一人ぼっち<br>誕生日　5月9日<br>身長　159cm</p>
+				</transition>
+			<label><input type="checkbox" value="shiho.png" v-model="isOKl3">
+				日野森志歩</label>
+				<transition>
+					<p v-if="isOKl3"><img src ="shiho.png"><br>学校　宮益坂女子学園<br>学年　1-A<br>趣味　好きなガールズバンドのライブに行く、ベースの練習、演奏<br>特技　書道<br>好きな食べ物　ラーメン、ハンバーグ<br>嫌いな食べ物　豆腐<br>苦手　姉<br>誕生日　1月8日<br>身長　159cm</p>
+				</transition>
+			<label><input type="checkbox" value="honami.png" v-model="isOKl4">
 				望月穂波</label><br>
-			<label><input type="radio" value="minori.png" v-model="fileName">
-				花里みのり</label><br>
-			<label><input type="radio" value="haruka.png" v-model="fileName">
-				桐谷遥</label><br>
-			<label><input type="radio" value="airi.png" v-model="fileName">
-				桃井愛莉</label><br>
-			<label><input type="radio" value="shizuku.png" v-model="fileName">
+				<transition>
+					<p v-if="isOKl4"><img src ="honami.png"><br>学校　宮益坂女子学園<br>学年　1-B<br>趣味　飼い犬の散歩、家庭菜園<br>特技　家事全般、水泳<br>好きな食べ物　アップルパイ<br>嫌いな食べ物　チーズ<br>苦手　絵を描くこと<br>誕生日　10月27日<br>身長　166cm</p>
+				</transition>
+				MOREMORE JUNP!<br>
+			<label><input type="checkbox" value="minori.png" v-model="isOKm1">
+				花里みのり</label>
+				<transition>
+					<p v-if="isOKm1"><img src ="minori.png"><br>学校　宮益坂女子学園<br>学年　1-A<br>趣味　振りコピ、日記をつけること、動物の世話<br>特技　キャッチフレーズをつけること<br>好きな食べ物　サーモン<br>嫌いな食べ物　ブロッコリー<br>苦手　落ち着いた行動<br>誕生日　4月14日<br>身長　158cm</p>
+				</transition>
+			<label><input type="checkbox" value="haruka.png" v-model="isOKm2">
+				桐谷遥</label>
+				<transition>
+					<p v-if="isOKm2"><img src ="haruka.png"><br>学校　宮益坂女子学園<br>学年　1-C<br>趣味　ペンギングッズ集め<br>特技　バスケットボール<br>好きな食べ物　甘いもの全般<br>嫌いな食べ物　ワサビ<br>苦手　怠けること<br>誕生日　10月5日<br>身長　163cm</p>
+				</transition>
+			<label><input type="checkbox" value="airi.png" v-model="isOKm3">
+				桃井愛莉</label>
+				<transition>
+					<p v-if="isOKm3"><img src ="airi.png"><br>学校　宮益坂女子学園<br>学年　2-D<br>趣味　アイドル研究、ショッピング<br>特技　料理、子供の面倒を見ること<br>好きな食べ物　和菓子<br>嫌いな食べ物　レバー<br>苦手　ネコ（アレルギー）<br>誕生日　3月19日<br>身長　156cm</p>
+				</transition>
+			<label><input type="checkbox" value="shizuku.png" v-model="isOKm4">
 				日野森雫</label><br>
-			<label><input type="radio" value="kohane.png" v-model="fileName">
-				小豆沢こはね</label><br>
-			<label><input type="radio" value="ann.png" v-model="fileName">
-				白石杏</label><br>
-			<label><input type="radio" value="akito.png" v-model="fileName">
-				東雲彰人</label><br>
-			<label><input type="radio" value="touya.png" v-model="fileName">
+				<transition>
+					<p v-if="isOKm4"><img src ="shizuku.png"><br>学校　宮益坂女子学園<br>学年　2-D<br>趣味　読書、散歩<br>特技　弓道、刺繡<br>好きな食べ物　うどん、湯葉<br>嫌いな食べ物　辛いもの全般<br>苦手　地図を読むこと、機械の操作<br>誕生日　12月6日<br>身長　168cm</p>
+				</transition>
+				ViVid BAD SQUAD
+			<label><input type="checkbox" value="kohane.png" v-model="isOKvi1">
+				小豆沢こはね</label>
+				<transition>
+					<p v-if="isOKvi1"><img src ="kohane.png"><br>学校　宮益坂女子学園<br>学年　1-A<br>趣味　父親が飼っているヘビのお世話<br>特技　写真<br>好きな食べ物　桃まん、ごま団子<br>嫌いな食べ物　酢の物<br>苦手　人前に立つこと<br>誕生日　3月2日<br>身長　156cm</p>
+				</transition>
+			<label><input type="checkbox" value="ann.png" v-model="isOKvi2">
+				白石杏</label>
+				<transition>
+					<p v-if="isOKvi2"><img src ="ann.png"><br>学校　神山高校<br>学年　1-A<br>趣味　ミント栽培<br>特技　コーヒーや紅茶を淹れること<br>好きな食べ物　ラムレーズンのアイス<br>嫌いな食べ物　トマト<br>苦手　幽霊、怪談話<br>誕生日　7月26日<br>身長　160cm</p>
+				</transition>
+			<label><input type="checkbox" value="akito.png" v-model="isOKvi3">
+				東雲彰人</label>
+				<transition>
+					<p v-if="isOKvi3"><img src ="akito.png"><br>学校　神山高校<br>学年　1-C<br>趣味　ファッションコーディネート<br>特技　ヒューマンビートボックス<br>好きな食べ物　パンケーキ、チーズケーキ<br>嫌いな食べ物　にんじん<br>苦手　犬<br>誕生日　11月12日<br>身長　174cm</p>
+				</transition>
+			<label><input type="checkbox" value="touya.png" v-model="isOKvi4">
 				青柳冬弥</label><br>
-			<label><input type="radio" value="tsukasa.png" v-model="fileName">
-				天馬司</label><br>
-			<label><input type="radio" value="emu.png" v-model="fileName">
-				鳳えむ</label><br>
-			<label><input type="radio" value="nene.png" v-model="fileName">
-				草薙寧々</label><br>
-			<label><input type="radio" value="rui.png" v-model="fileName">
+				<transition>
+					<p v-if="isOKvi4"><img src ="touya.png"><br>学校　神山高校<br>学年　1-B<br>趣味　読書<br>特技　ピアノ、バイオリン<br>好きな食べ物　コーヒー、クッキー<br>嫌いな食べ物　イカ<br>苦手　高い所<br>誕生日　5月25日<br>身長　178cm</p>
+				</transition>
+				ワンダーランズショウタイム<br>
+			<label><input type="checkbox" value="tsukasa.png" v-model="isOKw1">
+				天馬司</label>
+				<transition>
+					<p v-if="isOKw1"><img src ="tsukasa.png"><br>学校　神山高校<br>学年　2-A<br>趣味　ミュージカル観劇、衣装づくり<br>特技　どんな時も即カコいいポーズができる、ピアノ<br>好きな食べ物　アクアパッツァ、生姜焼き<br>嫌いな食べ物　ピーマン<br>苦手　虫（特に多足）<br>誕生日　5月17日<br>身長　172cm</p>
+				</transition>
+			<label><input type="checkbox" value="emu.png" v-model="isOKw2">
+				鳳えむ</label>
+				<transition>
+					<p v-if="isOKw2"><img src ="emu.png"><br>学校　宮益坂女子学園<br>学年　1-B<br>趣味　ご近所探検<br>特技　アクロバット、なんでも美味しく食べられる<br>好きな食べ物　鯛焼き<br>嫌いな食べ物　なし！<br>苦手　夕暮れ<br>誕生日　9月9日<br>身長　152cm</p>
+				</transition>
+			<label><input type="checkbox" value="nene.png" v-model="isOKw3">
+				草薙寧々</label>
+				<transition>
+					<p v-if="isOKw3"><img src ="nene.png"><br>学校　神山高校<br>学年　1-B<br>趣味　対戦ゲーム、ミュージカル・映画鑑賞<br>特技　歌、機械の操作全般<br>好きな食べ物　グレープフルーツ<br>嫌いな食べ物　ミント味の食べ物<br>苦手　人通りの多い場所<br>誕生日　7月20日<br>身長　156cm</p>
+				</transition>
+			<label><input type="checkbox" value="rui.png" v-model="isOKw4">
 				神代類</label><br>
-			<label><input type="radio" value="kanade.png" v-model="fileName">
-				宵崎奏</label><br>
-			<label><input type="radio" value="mafuyu.png" v-model="fileName">
-				朝比奈まふゆ</label><br>
-			<label><input type="radio" value="ena.png" v-model="fileName">
-				東雲絵名</label><br>
-			<label><input type="radio" value="mizuki.png" v-model="fileName">
-				暁山瑞希</label><br>
-
-			
-			<p>{{ fileName }} を選択<p>
-			<img v-bind:src="fileName"></img>
+				<transition>
+					<p v-if="isOKw4"><img src ="rui.png"><br>学校　神山高校<br>学年　2-B<br>趣味　ショーの演出を考えること、バルーンアート<br>特技　発明<br>好きな食べ物　ラムネ菓子<br>嫌いな食べ物　野菜全般<br>苦手　掃除、単純作業<br>誕生日　6月24日<br>身長　180cm</p>
+				</transition>
+				25時/ナイトコードで<br>
+			<label><input type="checkbox" value="kanade.png" v-model="isOKn1">
+				宵崎奏</label>
+				<transition>
+					<p v-if="isOKn1"><img src ="kanade.png"><br>学校　通信制高校<br>学年　-<br>趣味　音楽を探して聴くこと、映画や漫画、アニメ、美術作品を見ること<br>特技　感覚で時間を計れる<br>好きな食べ物　カップ麵、缶詰<br>嫌いな食べ物　パクチーや納豆など、においが独特な物<br>苦手　直射日光、家事全般<br>誕生日　2月10日<br>身長　154cm</p>
+				</transition>
+			<label><input type="checkbox" value="mafuyu.png" v-model="isOKn2">
+				朝比奈まふゆ</label>
+				<transition>
+					<p v-if="isOKn2"><img src ="mafuyu.png"><br>学校　宮益坂女子学園<br>学年　2-B<br>趣味　アクアリウム<br>特技　英会話<br>好きな食べ物　お母さんの手料理<br>嫌いな食べ物　わからない<br>苦手　わからない<br>誕生日　1月27日<br>身長　162cm</p>
+				</transition>
+			<label><input type="checkbox" value="ena.png" v-model="isOKn3">
+				東雲絵名</label>
+				<transition>
+					<p v-if="isOKn3"><img src ="ena.png"><br>学校　神山高校（夜間定時制）<br>学年　2-D<br>趣味　絵を描くこと、自撮り＆SNSにアップロード、エゴサーチ<br>特技　ファッションの小物のリサーチ、料理の食材当て<br>好きな食べ物　パンケーキ、チーズケーキ<br>嫌いな食べ物　にんじん<br>苦手　朝起きること<br>誕生日　4月30日<br>身長　158cm</p>
+				</transition>
+			<label><input type="checkbox" value="mizuki.png" v-model="isOKn4">
+				暁山瑞希</label>
+				<transition>
+					<p v-if="isOKn4"><img src ="mizuki.png"><br>学校　神山高校<br>学年　1-A<br>趣味　動画素材集め、コラージュ<br>特技　洋服のアレンジ<br>好きな食べ物　カレーライス、フライドポテト<br>嫌いな食べ物　きのこ系<br>苦手　熱い食べ物<br>誕生日　8月27日<br>身長　163cm</p>
+				</transition>
 		</div>
 
-		<script>
-			new Vue({
-				el: '#app',
-				data: {
-					fileName: ''
-				}
-			})
-		</script>
-
-	</body>
-</html>
+			
+				<script>
+					new Vue({
+						el: '#app',
+						data: {
+							isOKv1: false,
+							isOKv2: false,
+							isOKv3: false,
+							isOKv4: false,
+							isOKv5: false,
+							isOKv6: false,
+							isOKl1: false,
+							isOKl2: false,
+							isOKl3: false,
+							isOKl4: false,
+							isOKm1: false,
+							isOKm2: false,
+							isOKm3: false,
+							isOKm4: false,
+							isOKvi1: false,
+							isOKvi2: false,
+							isOKvi3: false,
+							isOKvi4: false,
+							isOKw1: false,
+							isOKw2: false,
+							isOKw3: false,
+							isOKw4: false,
+							isOKn1: false,
+							isOKn2: false,
+							isOKn3: false,
+							isOKn4: false,
+						}
+					})
+				</script>
+				
+				<style>
+					/* 現れている最中と、消えている最中は、0.5秒 */
+					.v-enter-active, .v-leave-active {
+						transition: 0.5s;
+					}
+					/* 現れる前の状態と、消えたときの状態は、透明度0で、下へ20移動*/
+					.v-enter, .v-leave-to {
+						opacity: 0;
+						transform: translateY(20px)
+					}
+				</style>
+			</body>
+		</html>
